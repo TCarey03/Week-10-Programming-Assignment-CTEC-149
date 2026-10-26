@@ -2,17 +2,30 @@ class Pet {
     constructor(name, type) {
         this.name = name;
         this.type = type;
+        this.hunger = 50;
     }
 
     describe() {
         return `I am a ${this.type} named ${this.name}.`;
     }
+
+    feed() {
+        this.hunger -= 10;
+    }
 }
 
-// Create two different pet instances
-const pet1 = new Pet("Sparky", "Dragon");
-const pet2 = new Pet("Whiskers", "Cat");
+// Create one pet
+const myPet = new Pet("Sparky", "Dragon");
 
-// Print their descriptions
-console.log(pet1.describe());
-console.log(pet2.describe());
+// Find the HTML elements
+const hungerDisplay = document.getElementById("hunger");
+const feedButton = document.getElementById("feedButton");
+
+// Display the starting hunger
+hungerDisplay.textContent = myPet.hunger;
+
+// Feed the pet when the button is clicked
+feedButton.addEventListener("click", function () {
+    myPet.feed();
+    hungerDisplay.textContent = myPet.hunger;
+});
