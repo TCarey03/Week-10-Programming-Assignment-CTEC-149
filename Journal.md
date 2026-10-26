@@ -27,3 +27,15 @@ I used document.createElement() to create the HTML elements and appendChild() to
 My mental model changed because I now understand that a webpage can create new elements while it is running. The Pet class makes managing multiple pets easier because every pet follows the same blueprint but keeps its own state. Each Feed button updates only the pet associated with that button.
 
 I also added a check to prevent empty pet names from being added.
+
+----------------
+
+Phase 4: Validation & Reflection
+
+I updated the feed() method to prevent a pet's hunger from dropping below zero by using Math.max(0, this.hunger - 10).
+
+I tested adding multiple pets and feeding them separately to make sure each pet maintains its own hunger value. I also tested feeding a pet when its hunger was low and checked that an empty pet name was rejected.
+
+During the code review, I learned that keeping each pet's state inside its own instance helps prevent changes to one pet from affecting another. I also learned that event delegation could be useful for handling events when a page contains many dynamically created elements. I kept the existing event listeners because they are straightforward and work well for this project.
+
+The most important thing I learned is to test edge cases, not just the normal behavior. Testing hunger at zero helps prevent unexpected negative values.
