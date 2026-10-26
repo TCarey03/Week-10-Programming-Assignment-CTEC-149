@@ -4,15 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Pet Sanctuary</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+
+        .pet-card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            max-width: 300px;
+        }
+
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
     <h1>Virtual Pet Sanctuary</h1>
 
-    <h2>Sparky the Dragon</h2>
+    <input
+        type="text"
+        id="petName"
+        placeholder="Enter pet name"
+    >
 
-    <p>Hunger: <span id="hunger">50</span></p>
+    <button id="addPetButton">Add Pet</button>
 
-    <button id="feedButton">Feed Pet</button>
+    <div id="sanctuary"></div>
 
     <script src="script.js"></script>
 </body>
