@@ -5,3 +5,13 @@ I created a Pet class with a constructor that stores each pet's name and type. I
 The Pet class is the blueprint that defines the properties and behavior of pets. An instance is an individual pet created from that blueprint. Each instance can have its own name and type while using the same class methods.
 
 One thing I learned is that the this keyword lets each pet access its own properties.
+
+----------------
+
+Phase 2: State and Static Interaction
+
+I updated the Pet class to include a hunger property that starts at 50. I added a feed() method that decreases hunger by 10. I also created an HTML page with a Feed Pet button and a display showing the current hunger level.
+
+I used document.getElementById() to find the HTML elements and addEventListener() to make the button call the feed() method. I used textContent to update the hunger value on the page.
+
+The most intuitive part was using the button to trigger the feed() method. The part that required more attention was making sure the IDs in the HTML matched the IDs used in JavaScript. This helped me understand how JavaScript can change a webpage through the DOM.
