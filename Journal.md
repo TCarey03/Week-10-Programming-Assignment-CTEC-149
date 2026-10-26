@@ -15,3 +15,15 @@ I updated the Pet class to include a hunger property that starts at 50. I added 
 I used document.getElementById() to find the HTML elements and addEventListener() to make the button call the feed() method. I used textContent to update the hunger value on the page.
 
 The most intuitive part was using the button to trigger the feed() method. The part that required more attention was making sure the IDs in the HTML matched the IDs used in JavaScript. This helped me understand how JavaScript can change a webpage through the DOM.
+
+----------------
+
+Phase 3: The Pet Sanctuary (Dynamic UI)
+
+I updated my application so users can add multiple pets by entering a name and clicking the Add Pet button. Each pet gets its own card with a hunger display and Feed button.
+
+I used document.createElement() to create the HTML elements and appendChild() to add them to the page. Each time a pet is added, the program creates a new Pet instance with its own hunger value.
+
+My mental model changed because I now understand that a webpage can create new elements while it is running. The Pet class makes managing multiple pets easier because every pet follows the same blueprint but keeps its own state. Each Feed button updates only the pet associated with that button.
+
+I also added a check to prevent empty pet names from being added.
