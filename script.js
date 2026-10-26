@@ -10,8 +10,9 @@ class Pet {
     }
 
     feed() {
-        this.hunger -= 10;
+        this.hunger = Math.max(0, this.hunger - 10);
     }
+
 }
 
 // Find the HTML elements
